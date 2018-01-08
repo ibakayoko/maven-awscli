@@ -1,7 +1,7 @@
 FROM maven:3.5-jdk-8-slim
 
 RUN apt-get update && \
-    apt-get -y install python curl unzip git jq && \
+    apt-get -y install python curl unzip git jq dnsutils&& \
     cd /tmp && \
     curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" && \
     unzip awscli-bundle.zip && \
